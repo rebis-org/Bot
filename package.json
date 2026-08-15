@@ -1,0 +1,46 @@
+{
+  "name": "bot",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "generate": "drizzle-kit generate",
+    "types": "wrangler types",
+    "deploy": "wrangler d1 migrations apply bot --remote && wrangler deploy",
+    "typecheck": "tsc -b",
+    "fmt": "eslint . --fix",
+    "lint": "eslint .",
+    "get_me": "tsx ops/get_me.ts",
+    "set_webhook": "tsx ops/set_webhook.ts"
+  },
+  "dependencies": {
+    "@grammyjs/auto-retry": "^2.0.2",
+    "@grammyjs/commands": "^1.4.0",
+    "@grammyjs/menu": "^1.4.0",
+    "@grammyjs/parse-mode": "^2.3.0",
+    "@grammyjs/ratelimiter": "^1.2.1",
+    "@grammyjs/router": "^2.0.0",
+    "@grammyjs/runner": "^2.0.3",
+    "@grammyjs/stateless-question": "^4.0.0",
+    "drizzle-orm": "1.0.0-rc.4",
+    "foxts": "^5.9.1",
+    "grammy": "^1.45.1",
+    "valibot": "^1.4.2"
+  },
+  "devDependencies": {
+    "@eslint-sukka/node": "9.0.1",
+    "@grammyjs/types": "^4.0.0",
+    "@types/node": "^26.2.0",
+    "@typescript/native": "npm:typescript@7.0.2",
+    "dotenv": "^17.4.2",
+    "drizzle-kit": "1.0.0-rc.4",
+    "eslint": "^10.8.1",
+    "eslint-config-sukka": "^9.0.1",
+    "eslint-plugin-import-x": "^4.17.1",
+    "jsonc-parser": "4.0.0-next.2",
+    "tsx": "^4.23.12",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "wrangler": "^4.122.0"
+  }
+}

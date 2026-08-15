@@ -1,0 +1,60 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "bot",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-06-16",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": true,
+      "persist": true,
+      "head_sampling_rate": 1
+    }
+  },
+  "placement": { "mode": "smart" },
+  "triggers": {
+    "crons": [
+      "0 3 * * *",
+      "0 1 * * *",
+      "0 13 * * *"
+    ]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "4dd1594e-c483-4a45-84ad-961480253616",
+      "database_name": "bot",
+      "migrations_dir": "migrations",
+      "migrations_pattern": "migrations/*/migration.sql"
+    }
+  ],
+  "vars": {
+    "BOT_INFO": {
+      "id": 8844849311,
+      "is_bot": true,
+      "first_name": "Rebis",
+      "username": "rebis_org_bot",
+      "can_join_groups": true,
+      "can_read_all_group_messages": false,
+      "supports_inline_queries": false,
+      "supports_guest_queries": false,
+      "can_connect_to_business": false,
+      "has_main_web_app": false,
+      "has_topics_enabled": false,
+      "allows_users_to_create_topics": false,
+      "can_manage_bots": false,
+      "supports_join_request_queries": false
+    }
+  }
+}
