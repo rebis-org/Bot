@@ -23,7 +23,7 @@
     "@grammyjs/router": "^2.0.0",
     "@grammyjs/runner": "^2.0.3",
     "@grammyjs/stateless-question": "^4.0.0",
-    "drizzle-orm": "1.0.0-rc.4",
+    "drizzle-orm": "1.0.0-rc.5-169397b",
     "foxts": "^5.9.1",
     "grammy": "^1.45.1",
     "valibot": "^1.4.2"
