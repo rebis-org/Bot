@@ -41,6 +41,6 @@
     "jsonc-parser": "4.0.0-next.2",
     "tsx": "^4.23.12",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
-    "wrangler": "^4.122.0"
+    "wrangler": "^4.125.0"
   }
 }
