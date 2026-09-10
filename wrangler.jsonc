@@ -1,0 +1,46 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "bot",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-06-16",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": true,
+      "persist": true,
+      "head_sampling_rate": 1
+    }
+  },
+  "placement": {
+    "mode": "smart"
+  },
+  "triggers": {
+    "crons": [
+      "8 * * * *"
+    ]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "043b579e-65f8-447a-b430-a1fd0ad4f6b3",
+      "database_name": "bot",
+      "migrations_dir": "migrations",
+      "migrations_pattern": "migrations/*/migration.sql"
+    }
+  ],
+  "vars": {
+    "MATRIX_HS_URL": "https://matrix.rebis.cn",
+    "BOT_USER_ID": "@bot:matrix.rebis.cn"
+  }
+}

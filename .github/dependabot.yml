@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    target-branch: "main"
+    schedule:
+      interval: "daily"
+      time: "04:00"
+      timezone: "UTC"
+    labels:
+      - "kind/task"
+      - "status/todo"
+    open-pull-requests-limit: 3
+    rebase-strategy: "auto"
+    commit-message:
+      prefix: "chore(deps)"
